@@ -7,7 +7,7 @@ export default function NotFound() {
         404 - Page Not Found
       </h1>
       <p className="text-lg mb-6 text-center">
-        We're sorry, but the page you are trying to access could not be found.
+        We can&apos;re sorry, but the page you are trying to access could not be found.
       </p>
       <Link href="/">
         <p className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">
