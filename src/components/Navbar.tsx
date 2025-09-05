@@ -145,8 +145,8 @@ const Navbar = () => {
   return (
     <>
       <header
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur"
-        style={{ height: "var(--nav-h)" }}
+        className="sticky top-0 z-50 bg-white/90 backdrop-blur h-[64px]"
+        // style={{ height: "var(--nav-h)" }}
       >
         <nav className="container mx-auto w-full h-full flex items-center justify-between px-4">
           <button

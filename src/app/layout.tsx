@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { lazy } from "react";
+import ClientLayout from "@/components/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,22 +18,18 @@ export const metadata: Metadata = {
   description: "Portfolio of Nischal Shrestha",
 };
 
-const Navbar = lazy(() => import("../components/Navbar"));
-const Footer = lazy(() => import("../components/Footer"));
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {/* Wrap everything in a client-side layout */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
