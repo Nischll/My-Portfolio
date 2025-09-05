@@ -7,7 +7,6 @@ import gsap from "gsap";
 
 const Home = () => {
   const imageRef = useRef<HTMLDivElement | null>(null);
-  const hoverTween = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -58,8 +57,8 @@ const Home = () => {
         </h2>
         <p className="text-base sm:text-lg text-[#4C3D36] max-w-lg">
           I build modern, interactive, and scalable web applications with a
-          strong focus on{" "}
-          <span className="font-semibold text-[#A86B3E]">React</span> and{" "}
+          strong focus on
+          <span className="font-semibold text-[#A86B3E]">React</span> and
           <span className="font-semibold text-[#A86B3E]">JavaScript</span>.
         </p>
       </div>

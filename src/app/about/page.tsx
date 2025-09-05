@@ -10,7 +10,7 @@ const About = () => {
     >
       <h2 className="text-3xl font-bold mb-6">About Me</h2>
       <p className="mb-4">
-        I'm a frontend-focused software engineer with a passion for building
+        I&apos;m a frontend-focused software engineer with a passion for building
         scalable web applications and intuitive UI/UX.
       </p>
       <p>
