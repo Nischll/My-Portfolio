@@ -43,11 +43,11 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col gap-8 sm:grid sm:grid-cols-9 sm:gap-8 bg-accent scroll-section container mx-auto px-4 py-14 overflow-hidden"
+      className="min-h-screen flex flex-col gap-8 sm:grid sm:grid-cols-9 sm:gap-8 bg-accent container mx-auto px-4 py-14 overflow-hidden"
     >
       <div className="sm:col-span-4 col-span-1 bg-transparent py-10">
         <p className="text-lg text-[#A86B3E] font-medium tracking-wide">
-          👋 Hi, my name is
+          Hi, my name is
         </p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#3B2F2F]">
           Nischal Shrestha

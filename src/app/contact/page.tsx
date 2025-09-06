@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact-anim min-h-screen scroll-section container mx-auto px-4 py-14"
+      className="contact-anim min-h-screen container mx-auto px-4 py-14"
     >
       <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
       <p className="mb-4">Feel free to reach out via email or social media!</p>

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS, SectionId } from "@/data/nav";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [hash, setHash] = useState<string>(
@@ -145,8 +146,8 @@ const Navbar = () => {
   return (
     <>
       <header
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur h-[64px]"
-        // style={{ height: "var(--nav-h)" }}
+        className="sticky top-0 z-50 bg-white/90 backdrop-blur"
+        style={{ height: "var(--nav-h)" }}
       >
         <nav className="container mx-auto w-full h-full flex items-center justify-between px-4">
           <button
@@ -240,8 +241,9 @@ const Navbar = () => {
                   <ul className="flex flex-col gap-3">
                     {NAV_ITEMS.map((item) => (
                       <li key={item.id}>
-                        <button
-                          type="button"
+                        <Button
+                          variant= "link"
+                          size="sm"
                           onClick={() => {
                             setOpenMenu(false);
                             const section = document.getElementById(item.id);
@@ -251,15 +253,15 @@ const Navbar = () => {
                             window.history.pushState(null, "", `#${item.id}`);
                             setHash(`#${item.id}`);
                           }}
-                          className={cn(
-                            "w-full text-left py-3 px-2 text-lg font-medium rounded-md transition-colors",
-                            current === item.id
-                              ? "text-neutral bg-neutral/5"
-                              : "text-neutral/80 hover:bg-neutral/3"
-                          )}
+                          // className={cn(
+                          //   "w-full text-left py-3 px-2 text-lg font-medium rounded-md transition-colors",
+                          //   current === item.id
+                          //     ? "text-neutral bg-neutral/5"
+                          //     : "text-neutral/80 hover:bg-neutral/3"
+                          // )}
                         >
                           {item.label}
-                        </button>
+                        </Button>
                       </li>
                     ))}
                   </ul>
