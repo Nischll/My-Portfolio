@@ -9,7 +9,7 @@ const Projects = () => {
       id="projects"
       className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 min-h-screen scroll-mt-[var(--nav-h)]"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
           Portfolio
         </p>

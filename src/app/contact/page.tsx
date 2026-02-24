@@ -14,13 +14,19 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact-anim min-h-screen container mx-auto px-4 py-14 scroll-mt-[var(--nav-h)]"
+      className="contact-anim min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
-      <h2 className="text-3xl font-bold mb-6 text-[#3B2F2F]">{contact.title}</h2>
-      <p className="max-w-xl text-base sm:text-lg text-[#4C3D36] mb-8 leading-relaxed">
-        {contact.message}
-      </p>
-      <div className="flex flex-wrap gap-4">
+      <div className="max-w-4xl mx-auto">
+        <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
+          Connect
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+          {contact.title}
+        </h2>
+        <p className="text-[#5C4B45] text-lg max-w-2xl mb-8 leading-relaxed">
+          {contact.message}
+        </p>
+        <div className="flex flex-wrap gap-4">
         <Button asChild size="lg" className="bg-[#A86B3E] hover:bg-[#8f5a34] text-white">
           <a href={contact.email}>
             <Mail className="size-4" aria-hidden />
@@ -46,6 +52,7 @@ const Contact = () => {
           </a>
         </Button>
       </div>
+    </div>
     </section>
   );
 };

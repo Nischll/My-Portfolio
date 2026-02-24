@@ -1,11 +1,33 @@
+"use client";
+
 export default function Loader({ label = "Loading…" }: { label?: string }) {
   return (
-    <div role="status" aria-live="polite" className="flex items-center justify-center h-screen">
-      <svg className="animate-spin h-8 w-8 mr-3 text-neutral" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" opacity="0.2" />
-        <path d="M22 12a10 10 0 00-10-10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-      </svg>
-      <span className="text-sm text-neutral">{label}</span>
+    <div
+      role="status"
+      aria-live="polite"
+      aria-label={label}
+      className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#FAF7F4] to-background"
+    >
+      <p className="text-xs font-semibold tracking-widest uppercase text-[#A86B3E]/80 mb-6">
+        Nischal Shrestha
+      </p>
+      {/* Spinner — accent-colored ring */}
+      <div className="relative">
+        <div
+          className="size-12 rounded-full border-2 border-[#E8DDD4]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 size-12 rounded-full border-2 border-transparent border-t-[#A86B3E] animate-spin"
+          aria-hidden
+        />
+      </div>
+      {label && (
+        <p className="mt-5 text-sm font-medium text-[#5C4B45] tracking-wide">
+          {label}
+        </p>
+      )}
+      <span className="sr-only">{label}</span>
     </div>
   );
 }

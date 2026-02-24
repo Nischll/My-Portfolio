@@ -9,7 +9,7 @@ const About = () => {
       id="about"
       className="about-anim min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Section label */}
         <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
           About
