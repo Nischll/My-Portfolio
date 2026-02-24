@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS, SectionId } from "@/data/nav";
 import { Button } from "./ui/button";
+import { contact } from "@/data/portfolio-content";
 
 const Navbar = () => {
   const [hash, setHash] = useState<string>(
@@ -161,7 +162,18 @@ const Navbar = () => {
             {!openMenu ? <Menu /> : <X />}
           </button>
 
-          <span className="font-semibold">Nischal Shrestha</span>
+          <a
+            href="#home"
+            onClick={(e) => {
+              if (window.location.hash === "#home" || !window.location.hash) {
+                e.preventDefault();
+                document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="font-semibold text-[#3B2F2F] hover:text-[#A86B3E] transition-colors rounded-md px-2 py-1 -ml-2 hover:bg-[#F5EFE9]"
+          >
+            Nischal Shrestha
+          </a>
 
           <ul className="hidden sm:flex items-center gap-16">
             {NAV_ITEMS.map((item) => (
@@ -170,9 +182,11 @@ const Navbar = () => {
                   href={`#${item.id}`}
                   aria-current={current === item.id ? "true" : undefined}
                   className={cn(
-                    "nav-link transition-colors hover:text-neutral",
+                    "nav-link relative py-2 transition-colors duration-200 rounded-md px-2 -mx-2",
+                    "hover:text-[#3B2F2F]",
+                    "after:absolute after:left-2 after:right-2 after:bottom-0 after:h-0.5 after:scale-x-0 after:origin-center after:bg-[#A86B3E] after:transition-transform after:duration-200 hover:after:scale-x-100",
                     current === item.id
-                      ? "text-neutral active"
+                      ? "text-[#3B2F2F] font-medium after:scale-x-100"
                       : "text-neutral/60"
                   )}
                 >
@@ -182,13 +196,22 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <span>
+          <span className="flex items-center gap-3">
+            <a
+              href={contact.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-neutral/80 hover:text-[#3B2F2F] hover:bg-[#F5EFE9] transition-colors duration-200 border border-transparent hover:border-[#E8DDD4]"
+            >
+              <FileText className="size-4" aria-hidden />
+              {contact.resumeLabel}
+            </a>
             <a
               href="https://www.linkedin.com/in/nischal-shrestha-career"
               title="Connect with me on LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-transparent text-neutral hover:bg-[#eaf3ff]"
+              className="inline-flex items-center justify-center h-9 w-9 rounded-md text-neutral/70 hover:text-[#3B2F2F] hover:bg-[#F5EFE9] transition-colors duration-200"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -242,7 +265,7 @@ const Navbar = () => {
                     {NAV_ITEMS.map((item) => (
                       <li key={item.id}>
                         <Button
-                          variant= "link"
+                          variant="link"
                           size="sm"
                           onClick={() => {
                             setOpenMenu(false);
@@ -264,6 +287,18 @@ const Navbar = () => {
                         </Button>
                       </li>
                     ))}
+                    <li>
+                      <a
+                        href={contact.resumeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setOpenMenu(false)}
+                        className="inline-flex items-center gap-2 w-full py-3 px-2 text-lg font-medium rounded-md text-neutral/80 hover:text-neutral hover:bg-neutral/5 transition-colors"
+                      >
+                        <FileText className="size-4" aria-hidden />
+                        {contact.resumeLabel}
+                      </a>
+                    </li>
                   </ul>
                 </nav>
               </div>
