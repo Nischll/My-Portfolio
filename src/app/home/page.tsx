@@ -35,7 +35,7 @@ const Home = () => {
       className="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 container mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-[#FAF7F4] to-background"
     >
       {/* Content */}
-      <div className="flex flex-col justify-center max-w-xl lg:max-w-2xl order-2 lg:order-1">
+      <div className="flex flex-col justify-center max-w-xl lg:max-w-2xl order-1">
         <p className="text-sm sm:text-base font-medium tracking-wide text-[#A86B3E] uppercase mb-2">
           {hero.greeting}
         </p>
@@ -76,7 +76,7 @@ const Home = () => {
       {/* Image */}
       <div
         ref={imageRef}
-        className="relative w-full flex items-center justify-center order-1 lg:order-2 lg:flex-1 lg:max-w-[28rem] xl:max-w-[32rem]"
+        className="relative w-full flex items-center justify-center order-2 lg:flex-1 lg:max-w-[28rem] xl:max-w-[32rem]"
       >
         <div className="relative w-full aspect-square max-w-[20rem] sm:max-w-[24rem] lg:max-w-none min-w-[16rem] min-h-[16rem] sm:min-w-[20rem] sm:min-h-[20rem]">
           <div className="relative w-full h-full overflow-hidden rounded-2xl sm:rounded-[1.75rem] ring-2 ring-white/90 shadow-xl shadow-[#3B2F2F]/15">
