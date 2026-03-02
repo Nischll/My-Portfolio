@@ -30,7 +30,7 @@ export const about = {
 } as const;
 
 export const skills = {
-  title: "Skills",
+  title: "My Skills",
   groups: [
     {
       label: "Frontend",
@@ -42,7 +42,7 @@ export const skills = {
     },
     {
       label: "Tools & backend",
-      items: ["Git & GitHub", "Postman", "Express.js (basic)", "PostgreSQL"],
+      items: ["Git, Gitlab & GitHub", "Postman", "Express.js (basic)", "PostgreSQL"],
     },
   ],
 } as const;

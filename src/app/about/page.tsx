@@ -2,10 +2,7 @@
 
 import { about } from "@/data/portfolio-content";
 import {
-  Code2,
-  Globe,
-  GraduationCap,
-  Briefcase,
+  Info,
   LayoutDashboard,
   Plug,
   Users,
@@ -19,13 +16,6 @@ const STRENGTH_ICONS = [
   FileCode,
 ] as const;
 
-const ABOUT_ICONS = [
-  { Icon: Code2, label: "Frontend" },
-  { Icon: Globe, label: "International" },
-  { Icon: GraduationCap, label: "Learning" },
-  { Icon: Briefcase, label: "Product" },
-];
-
 const About = () => {
   return (
     <section
@@ -35,22 +25,10 @@ const About = () => {
       <div className="w-full">
         {/* Top section: two columns — left visual, right text + tags */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-10 mb-16">
-          {/* Left: icons representing About me (lighter shade) */}
+          {/* Left: single Info icon in card */}
           <div className="md:col-span-2 flex flex-col items-center justify-center">
-            <div className="w-full max-w-[240px] aspect-square relative rounded-2xl bg-[#FAF7F4] border border-[#E8DDD4] p-6 flex items-center justify-center shadow-sm">
-              <div className="grid grid-cols-2 gap-4 w-full h-full">
-                {ABOUT_ICONS.map(({ Icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex flex-col items-center justify-center rounded-xl bg-white/90 border border-[#E8DDD4]/80 p-3"
-                  >
-                    <Icon className="size-8 text-[#A86B3E] mb-1" aria-hidden />
-                    <span className="text-[10px] font-medium text-[#5C4B45] uppercase tracking-wide">
-                      {label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            <div className="w-full max-w-[200px] aspect-square rounded-2xl bg-[#FAF7F4] border border-[#E8DDD4] flex items-center justify-center shadow-sm">
+              <Info className="size-20 sm:size-24 text-[#A86B3E]" aria-hidden />
             </div>
           </div>
 
