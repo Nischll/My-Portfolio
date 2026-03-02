@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <footer className=" text-white relative ">
-      <div className="bg-gray-700 py-10 px-4 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 container">
+      <div className="bg-gray-700 py-10 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
         {/* Left: Brand / Name */}
         <div>
           <h2 className="text-2xl font-bold">Nischal Shrestha</h2>

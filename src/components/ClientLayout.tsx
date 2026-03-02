@@ -38,7 +38,7 @@ export default function ClientLayout({
   return (
     <>
       {ready ? (
-        <>
+        <div className="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <Suspense fallback={<Loader />}>
             <Navbar />
           </Suspense>
@@ -46,7 +46,7 @@ export default function ClientLayout({
           <Suspense fallback={<Loader />}>
             <Footer />
           </Suspense>
-        </>
+        </div>
       ) : (
         <Loader label="Loading Page..." />
       )}

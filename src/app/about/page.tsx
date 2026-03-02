@@ -20,7 +20,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="about-anim min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
+      className="about-anim py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
       <div className="w-full">
         {/* Top section: two columns — left visual, right text + tags */}
@@ -34,6 +34,9 @@ const About = () => {
 
           {/* Right: About me heading and paragraphs */}
           <div className="md:col-span-4">
+            <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
+              GET TO KNOW ME
+            </p>
             <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[#3B2F2F] tracking-tight mb-4">
               <span className="w-1.5 h-8 sm:h-9 bg-[#A86B3E] rounded-full shrink-0" aria-hidden />
               {about.title}

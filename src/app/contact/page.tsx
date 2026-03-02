@@ -14,45 +14,46 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact-anim min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
+      className="contact-anim py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="w-full">
         <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
           Connect
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+        <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+          <span className="w-1.5 h-8 sm:h-9 bg-[#A86B3E] rounded-full shrink-0" />
           {contact.title}
         </h2>
         <p className="text-[#5C4B45] text-lg max-w-2xl mb-8 leading-relaxed">
           {contact.message}
         </p>
         <div className="flex flex-wrap gap-4">
-        <Button asChild size="lg" className="bg-[#A86B3E] hover:bg-[#8f5a34] text-white">
-          <a href={contact.email}>
-            <Mail className="size-4" aria-hidden />
-            {contact.emailLabel}
-          </a>
-        </Button>
-        <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#20bd5a] text-white border-0">
-          <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <WhatsAppIcon />
-            {contact.whatsappLabel}
-          </a>
-        </Button>
-        <Button asChild variant="outline" size="lg" className="border-[#A86B3E] text-[#A86B3E] hover:bg-[#A86B3E]/10">
-          <a href={contact.linkedInUrl} target="_blank" rel="noopener noreferrer">
-            <Linkedin className="size-4" aria-hidden />
-            {contact.linkedInLabel}
-          </a>
-        </Button>
-        <Button asChild variant="outline" size="lg" className="border-[#A86B3E] text-[#A86B3E] hover:bg-[#A86B3E]/10">
-          <a href={contact.githubUrl} target="_blank" rel="noopener noreferrer">
-            <Github className="size-4" aria-hidden />
-            {contact.githubLabel}
-          </a>
-        </Button>
+          <Button asChild size="lg" className="bg-[#A86B3E] hover:bg-[#8f5a34] text-white">
+            <a href={contact.email}>
+              <Mail className="size-4" aria-hidden />
+              {contact.emailLabel}
+            </a>
+          </Button>
+          <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#20bd5a] text-white border-0">
+            <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
+              {contact.whatsappLabel}
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="border-[#A86B3E] text-[#A86B3E] hover:bg-[#A86B3E]/10">
+            <a href={contact.linkedInUrl} target="_blank" rel="noopener noreferrer">
+              <Linkedin className="size-4" aria-hidden />
+              {contact.linkedInLabel}
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="border-[#A86B3E] text-[#A86B3E] hover:bg-[#A86B3E]/10">
+            <a href={contact.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Github className="size-4" aria-hidden />
+              {contact.githubLabel}
+            </a>
+          </Button>
+        </div>
       </div>
-    </div>
     </section>
   );
 };

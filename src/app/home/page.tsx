@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 container mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-[#FAF7F4] to-background"
+      className="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 py-16 sm:py-20 lg:py-24 overflow-hidden"
     >
       {/* Content */}
       <div className="flex flex-col justify-center max-w-xl lg:max-w-2xl order-1">

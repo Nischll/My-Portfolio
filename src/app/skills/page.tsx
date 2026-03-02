@@ -57,8 +57,8 @@ function SkillCard({
   return (
     <div
       className={`flex flex-col rounded-2xl border bg-[#FAF7F4] p-5 sm:p-6 shadow-sm min-h-[260px] sm:min-h-[280px] transition-all duration-500 ease-out will-change-transform ${isActive
-          ? "min-h-[340px] sm:min-h-[380px] border-[#A86B3E]/50 shadow-2xl ring-2 ring-[#A86B3E]/20"
-          : "border-[#E8DDD4] shadow-md opacity-100"
+        ? "min-h-[340px] sm:min-h-[380px] border-[#A86B3E]/50 shadow-2xl ring-2 ring-[#A86B3E]/20"
+        : "border-[#E8DDD4] shadow-md opacity-100"
         }`}
     >
       <div className="flex items-center gap-3 mb-4">
@@ -99,9 +99,12 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
+      className="py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
       <div className="w-full">
+        <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
+          TECH STACK
+        </p>
         <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[#3B2F2F] tracking-tight mb-4">
           <span className="w-1.5 h-8 sm:h-9 bg-[#A86B3E] rounded-full shrink-0" />
           {skills.title}

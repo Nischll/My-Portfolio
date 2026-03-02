@@ -7,20 +7,21 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="min-h-screen container mx-auto px-4 sm:px-6 py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
+      className="py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="w-full">
         <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
           Work history
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+        <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+          <span className="w-1.5 h-8 sm:h-9 bg-[#A86B3E] rounded-full shrink-0" />
           {experience.title}
         </h2>
         <p className="text-[#5C4B45] text-lg max-w-2xl mb-12">
           Roles and responsibilities across product and contract work.
         </p>
 
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {experience.jobs.map((job, i) => (
             <article
               key={i}

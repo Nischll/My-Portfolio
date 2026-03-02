@@ -150,7 +150,7 @@ const Navbar = () => {
         className="sticky top-0 z-50 bg-white/90 backdrop-blur"
         style={{ height: "var(--nav-h)" }}
       >
-        <nav className="container mx-auto w-full h-full flex items-center justify-between px-4">
+        <nav className="w-full h-full flex items-center justify-between">
           <button
             ref={menuBtnRef}
             className="sm:hidden inline-flex items-center justify-center h-10 w-10 rounded-md text-neutral hover:bg-neutral/6"

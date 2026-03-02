@@ -7,13 +7,14 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 min-h-screen scroll-mt-[var(--nav-h)]"
+      className="py-16 sm:py-20 scroll-mt-[var(--nav-h)]"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="w-full">
         <p className="text-sm font-semibold tracking-widest uppercase text-[#A86B3E] mb-3">
           Portfolio
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+        <h2 className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[#3B2F2F] tracking-tight mb-4">
+          <span className="w-1.5 h-8 sm:h-9 bg-[#A86B3E] rounded-full shrink-0" />
           {projects.title}
         </h2>
         <p className="text-[#5C4B45] text-lg max-w-2xl mb-12">
