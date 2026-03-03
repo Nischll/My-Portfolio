@@ -1,7 +1,8 @@
 "use client";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { contact } from "@/data/portfolio-content";
+import { NAV_ITEMS } from "@/data/nav";
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" className="size-4 shrink-0" fill="currentColor" aria-hidden>
@@ -35,21 +36,16 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Middle: Quick Links */}
-        <div className="flex flex-col space-y-2">
-          <h3 className="font-semibold text-lg">Quick Links</h3>
-          <a href="#home" className="hover:text-orange-400 transition">
-            Home
-          </a>
-          <a href="#about" className="hover:text-orange-400 transition">
-            About
-          </a>
-          <a href="#projects" className="hover:text-orange-400 transition">
-            Projects
-          </a>
-          <a href="#contact" className="hover:text-orange-400 transition">
-            Contact
-          </a>
+        {/* Middle: Quick Links — match nav, two columns */}
+        <div>
+          <h3 className="font-semibold text-lg mb-2">Quick Links</h3>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            {NAV_ITEMS.map(({ id, label }) => (
+              <a key={id} href={`#${id}`} className="hover:text-orange-400 transition">
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Right: Socials */}
@@ -69,16 +65,18 @@ const Footer = () => {
               href="https://github.com/Nischll"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-orange-400 transition"
+              className="inline-flex items-center gap-1.5 hover:text-orange-400 transition"
             >
+              <Github className="size-4 shrink-0" aria-hidden />
               Github
             </a>
             <a
               href="https://www.linkedin.com/in/nischal-shrestha-career"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-orange-400 transition"
+              className="inline-flex items-center gap-1.5 hover:text-orange-400 transition"
             >
+              <Linkedin className="size-4 shrink-0" aria-hidden />
               Linkedin
             </a>
           </div>
