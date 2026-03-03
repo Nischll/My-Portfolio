@@ -175,7 +175,7 @@ const Navbar = () => {
             Nischal Shrestha
           </a>
 
-          <ul className="hidden sm:flex items-center gap-16">
+          <ul className="hidden sm:flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
@@ -201,10 +201,11 @@ const Navbar = () => {
               href={contact.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-neutral/80 hover:text-[#3B2F2F] hover:bg-[#F5EFE9] transition-colors duration-200 border border-transparent hover:border-[#E8DDD4]"
+              title={contact.resumeLabel}
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-md px-2 py-2 sm:px-3 text-sm font-medium text-neutral/80 hover:text-[#3B2F2F] hover:bg-[#F5EFE9] transition-colors duration-200 border border-transparent hover:border-[#E8DDD4]"
             >
-              <FileText className="size-4" aria-hidden />
-              {contact.resumeLabel}
+              <FileText className="size-4 shrink-0" aria-hidden />
+              <span className="hidden md:inline">{contact.resumeLabel}</span>
             </a>
             <a
               href="https://www.linkedin.com/in/nischal-shrestha-career"
