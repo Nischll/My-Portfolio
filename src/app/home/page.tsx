@@ -118,11 +118,11 @@ const Home = () => {
           {FLOAT_ICONS.map(({ id, Icon, color, style, delay }) => (
             <span
               key={id}
-              className={`absolute z-10 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white/95 shadow-md ${color} ${style} animate-float will-change-transform`}
+              className={`absolute z-10 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 ${color} ${style} animate-float will-change-transform`}
               style={{ animationDelay: `${delay}s` }}
               aria-hidden
             >
-              <Icon className="size-5 sm:size-6" />
+              <Icon className="size-5 sm:size-8" />
             </span>
           ))}
           <div className="relative w-full h-full overflow-hidden rounded-2xl">
