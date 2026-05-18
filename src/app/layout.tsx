@@ -14,8 +14,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nischal Shrestha - Portfolio",
-  description: "Portfolio of Nischal Shrestha",
+  title: "Nischal Shrestha | Frontend Developer - React & Next.js",
+  description:
+    "Frontend developer from Nepal specializing in React.js, Next.js, Express.js, TypeScript and Tailwind CSS. Available for freelance and full-time opportunities.",
+  keywords: [
+    "Frontend Developer Nepal",
+    "React Developer Kathmandu",
+    "Next.js Developer",
+    "Express.js Developer",
+    "Nischal Shrestha",
+  ],
+  authors: [{ name: "Nischal Shrestha" }],
+  creator: "Nischal Shrestha",
+  verification: { google: "_I8jyO_32V92eJNEDrv47xtlnLCn-UqKXRM1Ky4GifA" },
+  
+  // Open Graph — controls how your link looks when shared on LinkedIn, Facebook etc.
+  openGraph: {
+    title: "Nischal Shrestha | Frontend Developer",
+    description:
+      "Frontend developer from Nepal specializing in React, Next.js, Express.js and TypeScript.",
+    url: "https://nischalshrestha91.com.np",
+    siteName: "Nischal Shrestha Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+
+  // Controls Google search preview
+  alternates: {
+    canonical: "https://nischalshrestha91.com.np",
+  },
+
+  // Tells Google to index your site
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
