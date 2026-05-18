@@ -18,21 +18,25 @@ export default function ClientLayout({
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // Simulate loader
     const timer = setTimeout(() => setReady(true), 500);
     return () => clearTimeout(timer);
   }, []);
 
-  // Refresh ScrollTrigger after everything mounts
   useEffect(() => {
     if (!ready) return;
-    const handleRefresh = () => ScrollTrigger.refresh();
-    window.addEventListener("resize", handleRefresh);
 
-    // Initial refresh after next animation frame
-    requestAnimationFrame(() => ScrollTrigger.refresh());
+    // Refresh once after fonts/images have had time to load
+    const t1 = setTimeout(() => ScrollTrigger.refresh(), 100);
+    const t2 = setTimeout(() => ScrollTrigger.refresh(), 600);
 
-    return () => window.removeEventListener("resize", handleRefresh);
+    const handleResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [ready]);
 
   return (
