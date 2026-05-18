@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Nischal Shrestha" }],
   creator: "Nischal Shrestha",
   verification: { google: "_I8jyO_32V92eJNEDrv47xtlnLCn-UqKXRM1Ky4GifA" },
-  
+
   // Open Graph — controls how your link looks when shared on LinkedIn, Facebook etc.
   openGraph: {
     title: "Nischal Shrestha | Frontend Developer",
@@ -61,6 +61,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nischal Shrestha",
+              url: "https://nischalshrestha91.com.np",
+              jobTitle: "Frontend Developer",
+              address: { "@type": "PostalAddress", addressCountry: "NP" },
+              sameAs: [
+                "https://www.linkedin.com/in/nischal-shrestha-career",
+                "https://github.com/Nischll",
+              ],
+            }),
+          }}
+        />
         {/* Wrap everything in a client-side layout */}
         <ClientLayout>{children}</ClientLayout>
       </body>
