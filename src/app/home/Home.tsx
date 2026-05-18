@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import profile from "@/assets/profile.png";
+import profile from "@/assets/profile.webp";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { hero } from "@/data/portfolio-content";
