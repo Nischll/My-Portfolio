@@ -51,10 +51,10 @@ export const experience = {
   title: "Experience",
   jobs: [
     {
-      role: "React Frontend Developer (Contract)",
+      role: "React Frontend Developer",
       company: "International Client (Canada)",
       project: "Strata Management System",
-      period: "Oct 2025 – Present",
+      period: "Dec 2025 – Present",
       location: "Remote",
       bullets: [
         "Built a property management platform supporting multiple apartment buildings and resident workflows.",
