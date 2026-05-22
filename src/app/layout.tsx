@@ -24,6 +24,7 @@ const inter = Inter({
 // });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nischalshrestha91.com.np"),
   title: "Nischal Shrestha",
   icons: {
     icon: [
@@ -32,12 +33,12 @@ export const metadata: Metadata = {
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
-    other: [
-      {
-        rel: "android-chrome",
-        url: "/android-chrome-192x192.png",
-      },
-    ],
+    // other: [
+    //   {
+    //     rel: "android-chrome",
+    //     url: "/android-chrome-192x192.png",
+    //   },
+    // ],
   },
   manifest: "/manifest.json",
   description:
