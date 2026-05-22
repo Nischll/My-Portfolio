@@ -42,13 +42,13 @@ export function useScrollAnimation(
               opacity: 1,
               y: 0,
               filter: "blur(0px)",
-              duration: 0.65,
+              duration: 0.5,
               ease: "power3.out",
               delay: i * stagger,
               scrollTrigger: {
                 trigger: child,
                 // fires as soon as the element top crosses 95% down the viewport
-                start: "top 95%",
+                start: "top 105%",
                 toggleActions: "play none none none",
               },
             }
